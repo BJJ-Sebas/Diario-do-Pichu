@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://i.pinimg.com/564x/07/b9/30/07b9308d2bd1e86e9727d545d37d64a1.jpg);
+    background-size: 100%;
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    font-size: 1rem;
+    margin: 5px 0;
+    padding: 10px;   
+}
+
+
+h1 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.delete-btn {
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    animation: variocolor 2s infinite alternate-reverse;
+   
+}
+.delete-btn:hover {
+    background-color: rgb(71, 12, 138);
+    transform: translateY(-2px);
+}
+
+@keyframes Aumentador {
+   0% {
+    transform: scale(1)
+   } 
+   100% {
+    transform: scale(1.5);
+   }
+}
+@keyframes variocolor {
+    0% {
+        background-color: #FF5733;
+    }
+    15%{
+        background-color: #FF8D1A ;
+    }
+    25% {
+        background-color: #FFC300 ;
+    }
+    50% {
+        background-color: #DAF7A6 ;
+    }
+    75%{
+        background-color: #33FFBD ;
+    }
+    100% {
+        background-color: #1A5276; 
+    }
+}
+
+   .listadetarefas {
+        backdrop-filter: blur(2px);
+        border-radius: 15px;
+        border: 2px solid white;
+        padding: 20px;
+        width: 95%;
+        max-width: 600px;
+        max-height: 70%;
+        overflow-y: auto; 
+        resize: none;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+
+}
+
+#tarefaInput {
+    padding: 5px 8px;
+    background-color: white;
+    width: 70%;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+
+}
+
+#addbt {
+   padding: 2% 2%;
+    font-size: 16px;
+       color: #000000;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 25%;
+    margin-bottom: 10px;
+
+}
+      
+#addbt:hover {
+    background-color: gray;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+   animation: variocolor 4s infinite;
+}
+
+@media (max-width: 400px) {
+        .listadetarefas {
+            width: 90%;
+            padding: 10px;
+            height: auto;
+        }
+    
+        #tarefaInput {
+            font-size: 12px;
+            padding: 4px 6px;
+            width: 60%; 
+        }
+    
+        #addbt {
+            font-size: 14px;
+            padding: 4px 6px;
+            width: 35%; 
+        }
+    }
